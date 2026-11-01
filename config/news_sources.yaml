@@ -1,0 +1,129 @@
+# Демонстрационный набор открытых лент. Веса простые и зависят только от типа источника.
+# kind: official | news | analysis
+defaults:
+  timeout_connect_sec: 3
+  timeout_total_sec: 8
+  failures_before_pause: 3
+  pause_after_failures_min: 30
+  user_agent: Mozilla/5.0 (compatible; HoneyMoneyNews/1.0)
+domain_limits:
+  default:
+    min_interval_sec: 2
+    max_parallel: 2
+tickers:
+- SBER
+- LKOH
+- ROSN
+- GAZP
+- VTBR
+- YDEX
+- PLZL
+- NVTK
+- X5
+- GMKN
+- MGNT
+- ALRS
+- AFLT
+- CHMF
+- NLMK
+- MOEX
+- SNGSP
+- MTSS
+sources:
+- id: cbr_ru
+  name: ЦБ РФ
+  kind: official
+  transport: rss
+  group: cbr
+  urls:
+  - https://www.cbr.ru/rss/eventrss
+  - https://www.cbr.ru/rss/RssPress
+  ru_specialized: true
+  drop_keywords:
+  - инвестиционных фондов
+  - Динамические ряды
+  - Ставки группы MIACR
+  weight: 0.9
+- id: moex_rss
+  name: Мосбиржа, все новости
+  kind: official
+  transport: rss
+  group: moex
+  urls:
+  - https://www.moex.com/export/news.aspx?cat=100
+  ru_specialized: true
+  drop_keywords:
+  - ценового коридора
+  - диапазона оценки процентных рисков
+  - О начале торгов ценными бумагами
+  - Итоги выпуска биржевых облигаций
+  - депозитный аукцион
+  weight: 0.9
+- id: interfax
+  name: Интерфакс
+  kind: news
+  transport: rss
+  urls:
+  - https://www.interfax.ru/rss.asp
+  ru_specialized: true
+  weight: 0.7
+- id: tass
+  name: ТАСС
+  kind: news
+  transport: rss
+  urls:
+  - https://tass.ru/rss/v2.xml
+  ru_specialized: true
+  weight: 0.7
+- id: rbc
+  name: РБК
+  kind: news
+  transport: rss
+  urls:
+  - https://rssexport.rbc.ru/rbcnews/news/30/full.rss
+  ru_specialized: true
+  weight: 0.7
+- id: kommersant
+  name: Коммерсантъ
+  kind: news
+  transport: rss
+  urls:
+  - https://www.kommersant.ru/RSS/section-business.xml
+  - https://www.kommersant.ru/RSS/section-economics.xml
+  - https://www.kommersant.ru/RSS/section-finance.xml
+  ru_specialized: true
+  weight: 0.7
+- id: vedomosti
+  name: Ведомости
+  kind: news
+  transport: rss
+  urls:
+  - https://www.vedomosti.ru/rss/rubric/finance
+  - https://www.vedomosti.ru/rss/rubric/business
+  ru_specialized: true
+  weight: 0.7
+- id: prime
+  name: Прайм
+  kind: news
+  transport: rss
+  urls:
+  - https://1prime.ru/export/rss2/index.xml
+  ru_specialized: true
+  weight: 0.7
+- id: finam
+  name: Финам
+  kind: news
+  transport: rss
+  urls:
+  - https://www.finam.ru/analysis/conews/rsspoint/
+  - https://www.finam.ru/analysis/nslent/rsspoint/
+  ru_specialized: true
+  weight: 0.7
+- id: smartlab
+  name: Смартлаб
+  kind: news
+  transport: rss
+  urls:
+  - https://smart-lab.ru/news/rss/
+  ru_specialized: true
+  weight: 0.7

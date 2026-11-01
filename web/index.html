@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honey Money</title>
+<style>
+:root{--bg:#f7f6f2;--panel:#fff;--ink:#1c1c1a;--muted:#66645e;--line:#deddd6;--pos:#1a7f4b;--neg:#b3362b;--accent:#1f6f6a}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--panel:#1d1e1c;--ink:#ecebe6;--muted:#a3a29b;--line:#34352f;--pos:#57c28a;--neg:#ee7d70;--accent:#62c4bb}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+main{max-width:820px;margin:auto;padding:24px 16px}h1{margin:0;font-size:1.7rem}.mute{color:var(--muted);font-size:.9rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;margin-top:12px}
+.top{display:flex;justify-content:space-between;gap:12px;font-weight:600}.pos{color:var(--pos)}.neg{color:var(--neg)}
+ul{margin:8px 0;padding-left:18px;font-size:.92rem}a{color:var(--accent)}button{font:inherit;padding:6px 12px;border:1px solid var(--accent);border-radius:6px;background:transparent;color:var(--accent);cursor:pointer}
+.res{margin-top:10px;padding:10px;border-left:3px solid var(--accent);font-size:.94rem}.notice{color:var(--neg);font-size:.86rem}
+</style></head><body><main>
+<h1>Honey Money</h1>
+<p class="mute" id="status">Загрузка…</p>
+<p class="mute">Сделок приложение не совершает. Это не инвестиционная рекомендация.</p>
+<div id="cards"></div>
+</main><script>
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const ACTION={consider_entry:'Модель рассмотрела бы вход',no_entry:'Входа нет'};
+async function ask(t,box,btn){btn.disabled=true;box.textContent='Модуль думает, это может занять до минуты…';box.className='res';
+ try{const r=await fetch('/api/decision/'+t,{method:'POST'});const d=await r.json();box.textContent='';
+  if(!r.ok){box.textContent=d.detail;return}
+  box.append(el('b','',ACTION[d.action]+(d.side?' ('+(d.side==='long'?'лонг':'шорт')+')':'')+(d.confidence!=null?', уверенность '+d.confidence:'')),el('div','',d.explanation));
+  if(d.notice)box.append(el('div','notice',d.notice))}catch(e){box.textContent='Сервис не ответил.'}finally{btn.disabled=false}}
+async function load(){const h=await (await fetch('/api/health')).json();
+ document.getElementById('status').textContent='Новости: '+(h.news==='demo'?'записанная лента':'живые ленты')+'. Торговый модуль: '+(h.strategy==='live'?'закрытый API':'записанные ответы, ключ не задан')+'.';
+ const cards=await (await fetch('/api/cards')).json();const root=document.getElementById('cards');root.textContent='';
+ if(!cards.length)root.append(el('p','mute','Новостей по бумагам пока нет: первый сбор занимает около минуты.'));
+ for(const c of cards){const d=el('div','card'),top=el('div','top');top.append(el('span','',c.ticker),el('span',c.score>0?'pos':c.score<0?'neg':'',(c.score>0?'+':'')+c.score.toFixed(2)));
+  const ul=el('ul');for(const n of c.headlines){const li=el('li');const a=el('a','',n.title);if(n.url&&/^https?:/.test(n.url)){a.href=n.url;a.rel='noopener';a.target='_blank'}li.append(a,el('span','mute',' · '+n.source));ul.append(li)}
+  const box=el('div'),btn=el('button','','Спросить торговый модуль');btn.onclick=()=>ask(c.ticker,box,btn);
+  d.append(top,el('div','mute',c.why),ul,btn,box);root.append(d)}}
+load();setInterval(load,180000);
+</script></body></html>

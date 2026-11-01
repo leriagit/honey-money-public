@@ -1,0 +1,223 @@
+[
+ {
+  "source_id": "tass",
+  "title": "Таджикистан планирует наладить с \"Яндексом\" сотрудничество в сфере ИИ",
+  "url": null,
+  "published_at": "2026-10-31T03:42:58+00:00",
+  "tickers": [
+   "YDEX"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "tass",
+  "title": "Эксперт Тихомиров назвал ошибки в накоплениях в пользу детей",
+  "url": null,
+  "published_at": "2026-10-31T05:49:38+00:00",
+  "tickers": [
+   "SBER"
+  ],
+  "sentiment": 1.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "tass",
+  "title": "ВТБ: продавцы вновь перехватили инициативу на рынке акций РФ",
+  "url": null,
+  "published_at": "2026-10-31T05:43:06+00:00",
+  "tickers": [
+   "VTBR"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "interfax",
+  "title": "Российский эксперт об итогах голосования в Кнессет Израиля: ситуация практически тупиковая, не исключены новые выборы",
+  "url": null,
+  "published_at": "2026-10-31T07:00:00+00:00",
+  "tickers": [
+   "PIKK"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "tass",
+  "title": "\"Аэрофлот\" вынужденно корректирует расписание из-за ограничений в Шереметьеве",
+  "url": null,
+  "published_at": "2026-10-31T09:04:28+00:00",
+  "tickers": [
+   "AFLT"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "finam",
+  "title": "Мосбиржа не планирует еще больше расширять время основной торговой сессии",
+  "url": null,
+  "published_at": "2026-10-31T09:51:33+00:00",
+  "tickers": [
+   "MOEX"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "kommersant",
+  "title": "«Аэрофлот» скорректировал расписание из-за ограничений на полеты в Шереметьево",
+  "url": null,
+  "published_at": "2026-10-31T09:28:38+00:00",
+  "tickers": [
+   "AFLT"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "tass",
+  "title": "\"Аэрофлот\" начал выполнение рейсов из Шереметьева по скорректированному расписанию",
+  "url": null,
+  "published_at": "2026-10-31T10:03:43+00:00",
+  "tickers": [
+   "AFLT"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "interfax",
+  "title": "Мосбиржа считает запуск торгов криптовалютами в РФ своевременным",
+  "url": null,
+  "published_at": "2026-10-31T10:04:00+00:00",
+  "tickers": [
+   "MOEX"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "kommersant",
+  "title": "Шереметьево опроверг информацию о воздушной тревоге в аэропорту",
+  "url": null,
+  "published_at": "2026-10-31T10:27:39+00:00",
+  "tickers": [
+   "AFLT"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "kommersant",
+  "title": "Мосбиржа назвала доступные монеты и время торгов криптовалютами с 1 декабря",
+  "url": null,
+  "published_at": "2026-10-31T11:49:01+00:00",
+  "tickers": [
+   "MOEX"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "interfax",
+  "title": "Подачу газа потребителям восстановили в Карабудахкентском районе Дагестана",
+  "url": null,
+  "published_at": "2026-10-31T16:50:00+00:00",
+  "tickers": [
+   "GAZP"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "tass",
+  "title": "РБК: Мосбиржа планирует проводить торги криптовалютами во всех сессиях",
+  "url": null,
+  "published_at": "2026-10-31T17:49:14+00:00",
+  "tickers": [
+   "MOEX"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "kommersant",
+  "title": "«Яндекс» заявил о планах обновить прогнозы показателей в феврале 2027 года",
+  "url": null,
+  "published_at": "2026-10-31T18:35:10+00:00",
+  "tickers": [
+   "YDEX"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "interfax",
+  "title": "Землетрясение магнитудой 6 зафиксировано у берегов Японии",
+  "url": null,
+  "published_at": "2026-11-01T02:57:00+00:00",
+  "tickers": [
+   "MGNT"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "tass",
+  "title": "\"Аэрофлот\" в январе - сентябре увеличил перевозки между РФ и Бангкоком на 14%",
+  "url": null,
+  "published_at": "2026-11-01T07:51:26+00:00",
+  "tickers": [
+   "AFLT"
+  ],
+  "sentiment": 1.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ },
+ {
+  "source_id": "tass",
+  "title": "Захарова: Польша пытается бороться с тем, что благословила на Украине 12 лет назад",
+  "url": null,
+  "published_at": "2026-11-01T17:30:59+00:00",
+  "tickers": [
+   "PIKK"
+  ],
+  "sentiment": 0.0,
+  "source_kind": "news",
+  "source_weight": 0.7,
+  "ru_relevance": 1.0
+ }
+]
